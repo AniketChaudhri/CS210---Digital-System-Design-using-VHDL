@@ -2,18 +2,36 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY Half_Adder IS
+-- Creating AND gate
+ENTITY And_Gate IS
     PORT (
         a : IN BIT;
         b : IN BIT;
-        c : OUT BIT;
         s : OUT BIT
     );
-END Half_Adder;
+END And_Gate;
 
-ARCHITECTURE Behav OF Half_Adder IS
+ARCHITECTURE Behav OF And_Gate IS
+
+BEGIN
+    s <= a AND b;
+END Behav;
+-- End of AND gate
+
+-- Creating XOR gate
+ENTITY XOR_Gate IS
+    PORT (
+        a : IN BIT;
+        b : IN BIT;
+        c : OUT BIT
+    );
 
 BEGIN
     c <= a XOR b;
-    s <= a AND b;
+END XOR_Gate;
+
+ARCHITECTURE Behav OF XOR_Gate IS
+BEGIN
+    c <= a XOR b;
 END Behav;
+-- End of XOR gate
