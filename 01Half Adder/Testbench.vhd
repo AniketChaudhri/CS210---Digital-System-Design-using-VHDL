@@ -1,3 +1,7 @@
+-- Team: Digital Daemon
+-- Team Member 1: Adarsh Anand (2003101)
+-- Team Member 2: Aniket Akshay Chaudhri (2003104)
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
