@@ -2,36 +2,55 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
--- Creating AND gate
 ENTITY And_Gate IS
     PORT (
-        a : IN BIT;
-        b : IN BIT;
-        s : OUT BIT
+        a_in, b_in : IN BIT;
+        c_out : OUT BIT
     );
 END And_Gate;
 
-ARCHITECTURE Behav OF And_Gate IS
-
+ARCHITECTURE e1 OF And_Gate IS
 BEGIN
-    s <= a AND b;
-END Behav;
--- End of AND gate
+    c_out <= a_in AND b_in;
+END e1;
 
--- Creating XOR gate
-ENTITY XOR_Gate IS
+ENTITY Xor_Gate IS
     PORT (
-        a : IN BIT;
-        b : IN BIT;
-        c : OUT BIT
+        a_in, b_in : IN BIT;
+        s_out : OUT BIT
     );
+END Xor_Gate;
 
+ARCHITECTURE e2 OF Xor_Gate IS
 BEGIN
-    c <= a XOR b;
-END XOR_Gate;
+    s_out <= a_in xor b_in;
+END e2;
 
-ARCHITECTURE Behav OF XOR_Gate IS
+ENTITY Half_Adder IS
+    PORT (
+        a_in : IN  bit;
+         b_in : IN  bit;
+         s_out : OUT  bit;
+         c_out : OUT  bit
+    );
+END Half_Adder;
+
+ARCHITECTURE structure OF Half_Adder IS
+
+    COMPONENT And_Gate IS
+        PORT (
+           a_in, b_in : IN BIT;
+        c_out : OUT BIT
+        );
+    END COMPONENT;
+
+    COMPONENT Xor_Gate IS
+        PORT (
+             a_in, b_in : IN BIT;
+        s_out : OUT BIT
+        );
+    END COMPONENT;
 BEGIN
-    c <= a XOR b;
-END Behav;
--- End of XOR gate
+    o_carry : And_Gate PORT MAP(a_in,b_in, c_out);
+    o_sum : Xor_Gate PORT MAP(a_in,b_in, s_out);
+END structure;
