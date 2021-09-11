@@ -23,15 +23,15 @@ END Xor_Gate;
 
 ARCHITECTURE e2 OF Xor_Gate IS
 BEGIN
-    s_out <= a_in xor b_in;
+    s_out <= a_in XOR b_in;
 END e2;
 
 ENTITY Half_Adder IS
     PORT (
-        a_in : IN  bit;
-         b_in : IN  bit;
-         s_out : OUT  bit;
-         c_out : OUT  bit
+        a_in : IN BIT;
+        b_in : IN BIT;
+        s_out : OUT BIT;
+        c_out : OUT BIT
     );
 END Half_Adder;
 
@@ -39,18 +39,18 @@ ARCHITECTURE structure OF Half_Adder IS
 
     COMPONENT And_Gate IS
         PORT (
-           a_in, b_in : IN BIT;
-        c_out : OUT BIT
+            a_in, b_in : IN BIT;
+            c_out : OUT BIT
         );
     END COMPONENT;
 
     COMPONENT Xor_Gate IS
         PORT (
-             a_in, b_in : IN BIT;
-        s_out : OUT BIT
+            a_in, b_in : IN BIT;
+            s_out : OUT BIT
         );
     END COMPONENT;
 BEGIN
-    o_carry : And_Gate PORT MAP(a_in,b_in, c_out);
-    o_sum : Xor_Gate PORT MAP(a_in,b_in, s_out);
+    o_carry : And_Gate PORT MAP(a_in, b_in, c_out);
+    o_sum : Xor_Gate PORT MAP(a_in, b_in, s_out);
 END structure;
