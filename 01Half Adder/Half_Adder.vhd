@@ -14,10 +14,10 @@ ENTITY And_Gate IS
     );
 END And_Gate;
 
-ARCHITECTURE e1 OF And_Gate IS
+ARCHITECTURE gate1 OF And_Gate IS
 BEGIN
     c_out <= a_in AND b_in;
-END e1;
+END gate1;
 -- End of And_Gate
 
 -- Creating Xor gate 
@@ -28,10 +28,10 @@ ENTITY Xor_Gate IS
     );
 END Xor_Gate;
 
-ARCHITECTURE e2 OF Xor_Gate IS
+ARCHITECTURE gate2 OF Xor_Gate IS
 BEGIN
     s_out <= a_in XOR b_in;
-END e2;
+END gate2;
 -- End of Xor_Gate
 
 -- Creating Half_Adder
