@@ -11,7 +11,10 @@ ENTITY Mux4X1_Conditional IS
 
     PORT (
         -- Inputs
-        a, b, c, d : STD_LOGIC_VECTOR(7 DOWNTO 0);
+        a : STD_LOGIC_VECTOR(7 DOWNTO 0);
+        b : STD_LOGIC_VECTOR(7 DOWNTO 0);
+        c : STD_LOGIC_VECTOR(7 DOWNTO 0);
+        d : STD_LOGIC_VECTOR(7 DOWNTO 0);
         s : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 
         -- Outputs
@@ -31,7 +34,10 @@ END Conditional;
 ENTITY Mux4X1_Selected IS
     PORT (
         -- Inputs
-        a, b, c, d : STD_LOGIC_VECTOR(7 DOWNTO 0);
+        a : STD_LOGIC_VECTOR(7 DOWNTO 0);
+        b : STD_LOGIC_VECTOR(7 DOWNTO 0);
+        c : STD_LOGIC_VECTOR(7 DOWNTO 0);
+        d : STD_LOGIC_VECTOR(7 DOWNTO 0);
         s : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 
         -- Outputs

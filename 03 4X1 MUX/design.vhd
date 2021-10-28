@@ -19,11 +19,11 @@ ENTITY Mux4X1 IS
         Y : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
     );
 END Mux4X1;
-
 -- Creating And gate 
 ENTITY And_Gate IS
     PORT (
-        a_in, b_in : IN BIT;
+        a_in : IN STD_LOGIC;
+        b_in : IN STD_LOGIC;
         c_out : OUT BIT
     );
 END And_Gate;
@@ -37,7 +37,8 @@ END gate;
 -- Creating Or gate
 ENTITY Or_Gate IS
     PORT (
-        a_in, b_in : IN BIT;
+        a_in : IN STD_LOGIC;
+        b_in : IN STD_LOGIC;
         c_out : OUT BIT
     );
 END Or_Gate;
@@ -51,7 +52,7 @@ END gate;
 -- Creating Not gate
 ENTITY Not_Gate IS
     PORT (
-        a_in : IN BIT;
+        a_in : IN STD_LOGIC;
         c_out : OUT BIT
     );
 END Not_Gate;
@@ -63,6 +64,5 @@ END gate;
 -- End of Not_Gate
 
 ARCHITECTURE behav OF Mux4X1 IS
-    -- Write this in the form of the components of the gates declared.
     y <= ((a AND (NOT(s(0))) AND (NOT(s(1)))) OR (b AND s(0) AND (NOT(s(1)))) OR (c AND (NOT(s(0))) AND s(1)) OR (d AND s(0) AND s(1)));
 END behav;
