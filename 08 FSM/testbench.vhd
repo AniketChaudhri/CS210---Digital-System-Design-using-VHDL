@@ -2,6 +2,8 @@
 -- Aniket Akshay Chaudhri (2003104)
 -- Adarsh (2003101)
 
+-- FINAL: https://www.edaplayground.com/x/XLJD 
+
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
 
@@ -36,13 +38,13 @@ BEGIN
         '1' AFTER 100ns,
         '0' AFTER 110ns,
         '0' AFTER 120ns,
-        '1' AFTER 130ns,
+        '0' AFTER 130ns,
         '0' AFTER 140ns,
         '1' AFTER 150ns,
         '1' AFTER 160ns,
         '0' AFTER 170ns,
         '1' AFTER 180ns,
-        '0' AFTER 190ns,
+        '1' AFTER 190ns,
         '1' AFTER 200ns,
         '0' AFTER 210ns,
         '0' AFTER 220ns,
