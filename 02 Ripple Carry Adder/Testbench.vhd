@@ -7,8 +7,8 @@ USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
 ENTITY Testbench IS
-
 END Testbench;
+
 -- Architecture of the Testbench
 ARCHITECTURE behav OF Testbench IS
     COMPONENT ripple_adder

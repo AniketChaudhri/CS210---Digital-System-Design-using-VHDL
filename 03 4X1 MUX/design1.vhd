@@ -52,6 +52,5 @@ BEGIN
         c WHEN "10",
         d WHEN "11",
         "00000000" WHEN OTHERS;
-
 END Selected;
 -- End of MUX4X1 using selected statements

@@ -19,6 +19,7 @@ ENTITY Mux4X1 IS
         Y : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
     );
 END Mux4X1;
+
 -- Creating And gate 
 ENTITY And_Gate IS
     PORT (
@@ -27,7 +28,6 @@ ENTITY And_Gate IS
         c_out : OUT BIT
     );
 END And_Gate;
-
 ARCHITECTURE gate OF And_Gate IS
 BEGIN
     c_out <= a_in AND b_in;
@@ -42,7 +42,6 @@ ENTITY Or_Gate IS
         c_out : OUT BIT
     );
 END Or_Gate;
-
 ARCHITECTURE gate OF Or_Gate IS
 BEGIN
     c_out <= a_in OR b_in;
@@ -56,7 +55,6 @@ ENTITY Not_Gate IS
         c_out : OUT BIT
     );
 END Not_Gate;
-
 ARCHITECTURE gate OF Not_Gate IS
 BEGIN
     c_out <= NOT a_in;

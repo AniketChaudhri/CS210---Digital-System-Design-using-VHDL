@@ -1,8 +1,5 @@
-# CS210-VHDL
-Team - Aniket + Adarsh
+# CS210 - VHDL
 
-Keep a note of all the codes written during the classes and the labs. Concerning VHDL.
+Team -> Aniket + Adarsh
 
-Think this as add-on to your existing skill set! 
-
-Happy coding ! :)
+All credits go to "NESO ACADEMY" for the help in the video lectures.

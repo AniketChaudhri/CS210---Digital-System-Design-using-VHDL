@@ -1,9 +1,5 @@
 """
 This Contains full Implementation of the Quine Mc'Clusky Algorithm for simplifying Boolean functions.
-
-Date	: 25-October-2020
-Author  : Sanjay Marreddi ( Using Template provided by Neha Karanjkar, IIT Goa )
-Roll No : 1904119
 """
 
 # Importing Required Libraries
@@ -149,8 +145,6 @@ def find_prime_implicants(minterms, dont_cares,N):
 		print("GROUP",i,"------------")
 		for m in G[i]:
 			print("\t",m)
-
-			
 
 	print("Combining terms in adjacent groups...")
 	

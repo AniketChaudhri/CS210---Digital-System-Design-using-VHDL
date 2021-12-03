@@ -16,19 +16,16 @@ ENTITY full_adder IS
         c_out : OUT STD_LOGIC
     );
 END ENTITY;
-
--- 
+ 
 ARCHITECTURE behav OF full_adder IS
-
-BEGIN
-
 BEGIN
     s <= a XOR b XOR c;
     c_out <= (a AND b) OR (a AND c) OR (b AND c);
 
 END behav;
 
--- A ripple adder uses 4 full adders instances connected by signals to add four bit input vectors a and b and returns the sum (s) and carry (c).
+-- A ripple adder uses 4 full adders instances connected by
+--  signals to add four bit input vectors a and b and returns the sum (s) and carry (c).
 
 ENTITY ripple_adder IS
     PORT (

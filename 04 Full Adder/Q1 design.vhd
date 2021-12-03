@@ -2,9 +2,10 @@
 -- Aniket 2003104
 -- Adarsh 2003101
 
--- Importing the required Library and Packages.
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.ALL;
+USE IEEE.std_logic_arith.ALL;
+
 -- A Full_adder adds 3 bits (a,b,c_in) to produce a sum (s) and a carry (c_out).
 ENTITY Full_adder IS
     PORT (
@@ -16,13 +17,10 @@ END Full_adder;
 -- Defining the architecture for above Full_adder entity.
 ARCHITECTURE arch_FA OF Full_adder IS
 BEGIN
-
     -- Defining the sum(s)
     s <= (a XOR (b XOR c_in));
-
     -- Defining the carry(c_out)
     c_out <= ((c_in AND (a XOR b)) OR (a AND b));
-
 END arch_FA;
 
 ------------------------------------------------------------
