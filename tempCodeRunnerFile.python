@@ -1,2 +1,0 @@
-from playsound import playsound
-playsound("D:\\Music\\SriVidya Level 2 mp3.mp3")

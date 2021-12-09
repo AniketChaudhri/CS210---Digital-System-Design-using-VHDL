@@ -1,1 +1,0 @@
--- Write a general sequence detector.
